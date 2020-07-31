@@ -12,7 +12,12 @@ def find_fibb_even_terms_sum(x):
     while fibd[1] < x:
         if fibd[1]%2 == 0:
             even_terms +=fibd[1]
-        t = fibd[1]    
-        fibd[1] = fibd[0] + fibd[1]
-        fibd[0] = t
+            
+        #t = fibd[1]    
+        #fibd[1] = fibd[0] + fibd[1]
+        #fibd[0] = t
+        
+        # more effiient way, and shorter! below
+        fibd[0], fibd[1] = fibd[1], fibd[0]+fibd[1]
+        
     return (even_terms)
